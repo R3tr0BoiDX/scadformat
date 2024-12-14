@@ -4,13 +4,13 @@ SCADFormat is a source code formatter / beautifier for [OpenSCAD](https://opensc
 
 SCADFormat is, shall we say, "opinionated" in the way that it formats OpenSCAD code. In other words, there are no configuration options that alter the way code is formatted. That's not because I feel strongly that OpenSCAD code should be formatted a certain way - it's just that I haven't had time to implement options.
 
+## Changes in this fork
+
+Compared to hugheaves/scadformat not much has changed. All I did was increase the indent size from 2 to 4, since that's also my personal preference as well as the VSCode extension I use has a hard time with 2 indents. Other than that, I also removed the creation of the backup file (files suffixed with a date and `.scadbak`), as my directory got cluttered with old backups quite quickly, even though I had no use for those files.
+
 ## Installation
 
-The easiest way to install is to download one of the pre-built binary releases:
-
-https://github.com/hugheaves/scadformat/releases
-
-Download the zip file for your operating system (windows.zip, linux,zip, macos.zip) and extract the contents.
+The easiest way to install is to download one of the pre-built binary releases. I can only provide a Linux x64 build tho. Check out the release page for that.
 
 ## Usage
 

@@ -30,6 +30,6 @@ func DefaultFormatSettings(fileName string) *FormatSettings {
 	return &FormatSettings{
 		fileName:   fileName,
 		maxLineLen: math.MaxInt,
-		indentSize: 2,
+		indentSize: 4,
 	}
 }

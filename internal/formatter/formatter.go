@@ -23,9 +23,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"path/filepath"
-	"strings"
-	"time"
 
 	"github.com/antlr4-go/antlr/v4"
 	"github.com/hugheaves/scadformat/internal/parser"
@@ -69,13 +66,13 @@ func (f *Formatter) formatFile() error {
 		return err
 	}
 
-	timeStamp := time.Now().Format("2006-01-02_15-04-05")
-	backupFileName := strings.TrimSuffix(f.settings.fileName, filepath.Ext(f.settings.fileName)) + "_" + timeStamp + ".scadbak"
-	err = os.WriteFile(backupFileName, input, 0666)
-	if err != nil {
-		zap.S().Errorf("failed to write file %s: %s", backupFileName, err)
-		return err
-	}
+	// timeStamp := time.Now().Format("2006-01-02_15-04-05")
+	// backupFileName := strings.TrimSuffix(f.settings.fileName, filepath.Ext(f.settings.fileName)) + "_" + timeStamp + ".scadbak"
+	// err = os.WriteFile(backupFileName, input, 0666)
+	// if err != nil {
+	// 	zap.S().Errorf("failed to write file %s: %s", backupFileName, err)
+	// 	return err
+	// }
 
 	err = os.WriteFile(f.settings.fileName, output, 0666)
 	if err != nil {

@@ -3,3 +3,10 @@
 /.antlr
 /scadformat
 /scadformat.exe
+
+go/*
+go
+
+venv
+venv/*
+go1.22.2.linux-amd64.tar.gz

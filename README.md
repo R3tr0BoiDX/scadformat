@@ -1,5 +1,9 @@
 # SCADFormat
 
+SCADFormat is a source code formatter/beautifier for [OpenSCAD](https://openscad.org/).
+
+SCADFormat is, shall we say, “opinionated” in the way that it formats OpenSCAD code. In other words, there are no configuration options that alter the way code is formatted. That's not because I feel strongly that OpenSCAD code should be formatted a certain way — it's just that I haven't had time to implement options.
+
 - [SCADFormat](#scadformat)
   - [Changes in this fork](#changes-in-this-fork)
   - [Installation](#installation)
@@ -14,10 +18,6 @@
     - [Build without `make`](#build-without-make)
 
 ---
-
-SCADFormat is a source code formatter/beautifier for [OpenSCAD](https://openscad.org/).
-
-SCADFormat is, shall we say, “opinionated” in the way that it formats OpenSCAD code. In other words, there are no configuration options that alter the way code is formatted. That's not because I feel strongly that OpenSCAD code should be formatted a certain way — it's just that I haven't had time to implement options.
 
 ## Changes in this fork
 

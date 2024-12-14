@@ -1,6 +1,21 @@
 # SCADFormat
 
-SCADFormat is a source code formatter / beautifier for [OpenSCAD](https://openscad.org/).
+- [SCADFormat](#scadformat)
+  - [Changes in this fork](#changes-in-this-fork)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Specifying a filename](#specifying-a-filename)
+    - [Read from stdin / write to stdout](#read-from-stdin--write-to-stdout)
+    - [Format all .scad recursively](#format-all-scad-recursively)
+  - [Building](#building)
+    - [Install Prerequisites](#install-prerequisites)
+    - [Checkout Source](#checkout-source)
+      - [Build with Make](#build-with-make)
+      - [Build without Makes](#build-without-makes)
+
+---
+
+SCADFormat is a source code formatter/beautifier for [OpenSCAD](https://openscad.org/).
 
 SCADFormat is, shall we say, "opinionated" in the way that it formats OpenSCAD code. In other words, there are no configuration options that alter the way code is formatted. That's not because I feel strongly that OpenSCAD code should be formatted a certain way - it's just that I haven't had time to implement options.
 
@@ -38,15 +53,10 @@ scadformat <my-source.scad >my-source-formatted.scad
 
 ### Format all .scad recursively
 
-Format all .scad files in the directory "." recursively. Note that if the scadformat command is not in your search PATH, you'll need to specify the full path to `scadformat` after the `-exec-` option. (e.g. `-exec $HOME\scasformat\scadformat`) 
+Format all .scad files in the directory "." recursively. Note that if the scadformat command is not in your search PATH, you'll need to specify the full path to `scadformat` after the `-exec-` option. (e.g. `-exec $HOME\scasformat\scadformat`)
 
 ```bash
 find . -type f -name "*.scad" -exec scadformat "{}" \;
-```
-
-If you are ok with the result, you can delete all backup files (.scadbak)
-```bash
-find $directory -type f -name "*.scadbak" -exec rm "{}" \;
 ```
 
 ## Building
@@ -103,7 +113,8 @@ ok  	github.com/hugheaves/scadformat/internal/formatter	(cached)
 go build cmd/scadformat.go
 ```
 
-#### Build without Make
+#### Build without Makes
+
 If you don't have make installed (i.e. on Windows), you can still build the program by running the necessary commands manually:
 
 Generate ANTLR parser
@@ -116,13 +127,12 @@ Build the executable
 go build -o scadformat cmd/scadformat.go
 ```
 
-run tests
+Run tests
 ```bash
 go test -v ./...
 ```
 
-
-run on a file
+Run on a file
 ```bash
 ./scadformat ./internal/formatter/testdata/solo_adapter.scad
 ```
